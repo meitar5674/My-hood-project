@@ -12,6 +12,10 @@
 		A9F6A0F71D0EB96200573C00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9F6A0F51D0EB96200573C00 /* Main.storyboard */; };
 		A9F6A0F91D0EB96200573C00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9F6A0F81D0EB96200573C00 /* Assets.xcassets */; };
 		A9F6A0FC1D0EB96200573C00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9F6A0FA1D0EB96200573C00 /* LaunchScreen.storyboard */; };
+		A9F6A1071D0EB9F500573C00 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F6A1061D0EB9F500573C00 /* Post.swift */; };
+		A9F6A10A1D0EC1FC00573C00 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F6A1091D0EC1FC00573C00 /* PostCell.swift */; };
+		A9F6A10D1D0EC70900573C00 /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F6A10C1D0EC70900573C00 /* AddPostVC.swift */; };
+		A9F6A1101D0ECD5C00573C00 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F6A10F1D0ECD5C00573C00 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		A9F6A0F81D0EB96200573C00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9F6A0FB1D0EB96200573C00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9F6A0FD1D0EB96200573C00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9F6A1061D0EB9F500573C00 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		A9F6A1091D0EC1FC00573C00 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		A9F6A10C1D0EC70900573C00 /* AddPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
+		A9F6A10F1D0ECD5C00573C00 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,50 @@
 		A9F6A0F01D0EB96200573C00 /* myLittleHood */ = {
 			isa = PBXGroup;
 			children = (
+				A9F6A10E1D0ECD4B00573C00 /* Services */,
+				A9F6A1031D0EB9DA00573C00 /* Model */,
+				A9F6A1081D0EC1DE00573C00 /* View */,
+				A9F6A10B1D0EC6DE00573C00 /* Controller */,
 				A9F6A0F11D0EB96200573C00 /* AppDelegate.swift */,
-				A9F6A0F31D0EB96200573C00 /* ViewController.swift */,
-				A9F6A0F51D0EB96200573C00 /* Main.storyboard */,
 				A9F6A0F81D0EB96200573C00 /* Assets.xcassets */,
-				A9F6A0FA1D0EB96200573C00 /* LaunchScreen.storyboard */,
 				A9F6A0FD1D0EB96200573C00 /* Info.plist */,
 			);
 			path = myLittleHood;
+			sourceTree = "<group>";
+		};
+		A9F6A1031D0EB9DA00573C00 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A9F6A1061D0EB9F500573C00 /* Post.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A9F6A1081D0EC1DE00573C00 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A9F6A0F51D0EB96200573C00 /* Main.storyboard */,
+				A9F6A0FA1D0EB96200573C00 /* LaunchScreen.storyboard */,
+				A9F6A1091D0EC1FC00573C00 /* PostCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A9F6A10B1D0EC6DE00573C00 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A9F6A0F31D0EB96200573C00 /* ViewController.swift */,
+				A9F6A10C1D0EC70900573C00 /* AddPostVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A9F6A10E1D0ECD4B00573C00 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A9F6A10F1D0ECD5C00573C00 /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +179,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9F6A1071D0EB9F500573C00 /* Post.swift in Sources */,
 				A9F6A0F41D0EB96200573C00 /* ViewController.swift in Sources */,
+				A9F6A10D1D0EC70900573C00 /* AddPostVC.swift in Sources */,
+				A9F6A1101D0ECD5C00573C00 /* DataService.swift in Sources */,
 				A9F6A0F21D0EB96200573C00 /* AppDelegate.swift in Sources */,
+				A9F6A10A1D0EC1FC00573C00 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
